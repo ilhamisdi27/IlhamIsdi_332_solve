@@ -6,10 +6,19 @@
 
 /** Answer 1 */
 console.log("Answer 1")
-function checkOddEven() {
-
+function checkOddEven(angka) {
+    let result1 = "";
+    if (typeof angka === "number") {
+        if (angka % 2 == 0) {
+            result1 = "genap"
+        } else {
+            result1 = "ganjil"
+        }
+    }else{
+        result1 = "invalid input"
+    }
+    return result1
 }
-
 console.log(checkOddEven(5)); // ganjil
 console.log(checkOddEven(2)); // genap
 console.log(checkOddEven("enam")); // invalid input
@@ -25,10 +34,19 @@ console.log("")
 
 /** Answer 2 */
 console.log("Answer 2")
-function checkMature() {
-
+function checkMature(umur) {
+    let isDewasa = ""
+    if (typeof umur === "number" && umur > 0) {
+        if (umur >= 18) {
+            isDewasa = "Dewasa"
+        } else {
+            isDewasa = "Belum dewasa"
+        }
+    } else {
+        isDewasa = "invalid input"
+    }
+    return isDewasa
 }
-
 console.log(checkMature(18)); // Dewasa
 console.log(checkMature(17)); // Belum dewasa
 console.log(checkMature("enam")); // invalid input
@@ -51,10 +69,25 @@ console.log("")
 
 /** Answer 3 */
 console.log("Answer 3")
-function scoreReport() {
-
+function scoreReport(input) {
+    let nilai = "";
+    if (typeof input === "number" && input > 0 && input < 101) {
+        if (input >= 90) {
+            nilai = "A";
+        } else if (input >= 80) {
+            nilai = "B";
+        } else if (input >= 70) {
+            nilai = "C";
+        } else if (input >= 60) {
+            nilai = "D";
+        } else {
+            nilai = "E";
+        }
+    } else {
+        nilai = "invalid input";
+    }
+    return nilai;
 }
-
 console.log(scoreReport(90)); // A
 console.log(scoreReport(89)); // B
 console.log(scoreReport(75)); // C
@@ -74,10 +107,19 @@ console.log("")
 
 /** Answer 4 */
 console.log("Answer 4")
-function loopCheckOddEven() {
-
+function loopCheckOddEven(inputNum) {
+    if (typeof inputNum === "number") {
+        i = 1;
+        while (i <= inputNum) {
+            if (i % 2 !== 0) {
+                console.log(`${i} => Bilangan Ganjil`)
+            }
+            i++;
+        } 
+    } else {
+        console.log("invalid input")
+    }
 }
-
 loopCheckOddEven(5)
 // 1 => Bilangan Ganjil
 // 2 => Bilangan Genap
@@ -109,7 +151,6 @@ function totalValue(inputNumber) {
     }
 
 }
-
 console.log(totalValue(100)); // 5050
 console.log(totalValue("empat")); // invalid input
 console.log("")
@@ -124,10 +165,24 @@ console.log("")
 
 /** Answer 6 */
 console.log("Answer 6")
-function checkVowels() {
+let vocals = ["a", "i", "u", "e", "o"];
+function checkVowels(input) {
+    let countVocal = 0;
+    if (typeof input !== "string") {
+        return "invalid input";
+    } else {
+        i = 0;
+        while (i < input.length) {
+            let char = input[i].toLowerCase();
 
+            if (vocals.includes(char)) {
+                countVocal++;
+            }
+            i++;
+        }
+    }
+    return countVocal;
 }
-
 console.log(checkVowels("I Love JavaScript")); // 6
 console.log(checkVowels("mie ayam")); //4
 console.log("")
@@ -150,9 +205,19 @@ console.log("")
 /** Answer 7 */
 console.log("Answer 7")
 function checkVowelConsonant(char) {
-    // code di scope ini yaa
+    if (typeof char !== "string") {
+        return "invalid input";
+    } else {
+        for (let i = 0; i < char.length; i++){
+            const charI = char[i].toLowerCase();
+            if (vocals.includes(charI)) {
+                return "Vokal";
+            } else {
+                return "Konsonan";
+            }
+        }
+    }
 }
-
 console.log(checkVowelConsonant('A')); // Output: "Vokal"
 console.log(checkVowelConsonant('b')); // Output: "Konsonan"
 console.log(checkVowelConsonant('a')); // Output: "Vokal"
@@ -175,9 +240,12 @@ console.log("")
 /** Answer 8 */
 console.log("Answer 8")
 function canVote(age) {
-    // code di scope ini yaa
+    if (typeof age === "number" || age > 0) {
+        return age >= 18;
+    } else {
+        return "invalid input"
+    }
 }
-
 console.log(canVote(20)); // true
 console.log(canVote(17)); // false
 console.log("")
@@ -205,10 +273,14 @@ console.log("")
 
 /** Answer 9 */
 console.log("Answer 9")
+const daysofWeek = ["Senin", "Selasa", "Rabu", "Kamis", "Jumat", "Sabtu", "Minggu"];
 function getDayName(dayNumber) {
-    
+    if (typeof dayNumber === "number" && dayNumber > 0 && dayNumber < 8) {
+        console.log (`Output: ${daysofWeek[dayNumber - 1]}`);
+    } else {
+        console.log ("Output: Nomor hari tidak valid")
+    }
 }
-
 console.log(getDayName(1)); // Output: "Senin"
 console.log(getDayName(5)); // Output: "Jumat"
 console.log(getDayName(8)); // Output: "Nomor hari tidak valid"
