@@ -303,11 +303,18 @@ console.log("")
 /** Answer 10 */
 console.log("Answer 10")
 function reverseArray(arr) {
-    
+    return arr.reverse();
 }
 
+function reverseArray2(arr) {
+    let revArray = [];
+    for (let i = arr.length - 1; i >= 0; i--) {
+        revArray.push(arr[i]);
+    }
+    return revArray
+}
 console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
-console.log(reverseArray(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
+console.log(reverseArray2(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
 console.log("")
 
 
@@ -318,12 +325,21 @@ console.log("")
  */
 
 /** Answer 11 */
+// palindrome = dibaca terbalik akan menghasilkan output yang sama
 console.log("Answer 11")
 const isPalindrome = (inputUser) => {
-
+    let revArray = [];
+    let spInput = inputUser.split("");
+    let i = spInput.length - 1;
+    while (i >= 0) {
+        revArray.push(spInput[i]);
+        i--;
+    }
+    return revArray.join("") === spInput.join("");
 }
-
 console.log(isPalindrome("kasur rusak")); // true
 console.log(isPalindrome("kodok")); // true
 console.log(isPalindrome("makan malam")); // false
 console.log("")
+
+console.log("Alhamdulillah Finish")
