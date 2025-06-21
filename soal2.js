@@ -1,9 +1,11 @@
-/**
+/** Question 1
  * Menentukan bilangan ganjil dan genap
  * 
  * Buatlah program untuk menentukan input bilangan apakah ganjil atau genap. Gunakan if-else dan function yang mengembalikan hasil "ganjil"/"genap"
  */
 
+/** Answer 1 */
+console.log("Answer 1")
 function checkOddEven() {
 
 }
@@ -11,15 +13,18 @@ function checkOddEven() {
 console.log(checkOddEven(5)); // ganjil
 console.log(checkOddEven(2)); // genap
 console.log(checkOddEven("enam")); // invalid input
+console.log("")
 
 
 
-/**
+/** Question 2
  * Menentukan usia dewasa
  * 
  * Buat sebuah program yang meminta usia seseorang, lalu gunakan if-else untuk menampilkan apakah seseorang tersebut sudah dewasa (>=18 tahun) atau belum. Gunakan if-else dan function yang mengembalikan string
  */
 
+/** Answer 2 */
+console.log("Answer 2")
 function checkMature() {
 
 }
@@ -28,10 +33,11 @@ console.log(checkMature(18)); // Dewasa
 console.log(checkMature(17)); // Belum dewasa
 console.log(checkMature("enam")); // invalid input
 console.log(checkMature(-1)); // invalid input
+console.log("")
 
 
 
-/**
+/** Question 3
  * Menentukan score student
  * 
  * Buat program yang mengubah nilai angka ke dalam nilai huruf (A, B, C, D, E) berdasarkan rentang berikut:
@@ -43,6 +49,8 @@ console.log(checkMature(-1)); // invalid input
  * Gunakan if-else dan function yang mengembalikan string
  */
 
+/** Answer 3 */
+console.log("Answer 3")
 function scoreReport() {
 
 }
@@ -54,15 +62,18 @@ console.log(scoreReport(59)); // E
 console.log(scoreReport(101)); // invalid input
 console.log(scoreReport(-1)); // invalid input
 console.log(scoreReport("sembilan puluh")); // invalid input
+console.log("")
 
 
 
-/**
+/** Question 4
  * Menampilkan Bilangan Ganjil dari 1 sampai 20
  * 
  * Buat program yang menampilkan semua bilangan ganjil dari 1 sampai 20 menggunakan for loop
  */
 
+/** Answer 4 */
+console.log("Answer 4")
 function loopCheckOddEven() {
 
 }
@@ -74,15 +85,18 @@ loopCheckOddEven(5)
 // 4 => Bilangan Genap
 // 5 => Bilangan Ganjil
 loopCheckOddEven("lima") // invalid input
+console.log("")
 
 
 
-/**
+/** Question 5
  * Menghitung Total Jumlah Angka
  * 
  * Buat program yang menjumlahkan semua angka dari 1 sampai dengan 100 menggunakan loop. Gunakan function yang mengirimkan value hasil penjumlahan tersebut
  */
 
+/** Answer 5 */
+console.log("Answer 5")
 function totalValue(inputNumber) {
     if (typeof inputNumber === "number"){
         let totalNumber = 0
@@ -98,25 +112,29 @@ function totalValue(inputNumber) {
 
 console.log(totalValue(100)); // 5050
 console.log(totalValue("empat")); // invalid input
+console.log("")
 
 
 
-/**
+/** Question 6
  * Menghitung huruf vokal
  * 
  * Buat program yang menerima sebuah string, lalu hitung berapa banyak huruf vokal (a, e, i, o, u) di dalam string tersebut. Gunakan function untuk mengembalikan value total jumlah huruf vocal
  */
 
+/** Answer 6 */
+console.log("Answer 6")
 function checkVowels() {
 
 }
 
 console.log(checkVowels("I Love JavaScript")); // 6
 console.log(checkVowels("mie ayam")); //4
+console.log("")
 
 
 
-/**
+/** Question 7
  * Cek karakter vokal atau konsonan
  * 
  * Buatlah sebuah fungsi untuk memeriksa apakah sebuah karakter adalah vokal atau konsonan
@@ -129,6 +147,8 @@ console.log(checkVowels("mie ayam")); //4
  * 5. RETURN string "Vokal" atau "Konsonan" sesuai dengan nilai char.
  */
 
+/** Answer 7 */
+console.log("Answer 7")
 function checkVowelConsonant(char) {
     // code di scope ini yaa
 }
@@ -136,10 +156,11 @@ function checkVowelConsonant(char) {
 console.log(checkVowelConsonant('A')); // Output: "Vokal"
 console.log(checkVowelConsonant('b')); // Output: "Konsonan"
 console.log(checkVowelConsonant('a')); // Output: "Vokal"
+console.log("")
 
 
 
-/**
+/** Question 8
  * Menentukan kelayakan Voting
  * 
  * Buatlah sebuah fungsi JavaScript yang memeriksa apakah seseorang memenuhi syarat untuk memberikan suara dalam pemilihan berdasarkan usia.
@@ -151,17 +172,19 @@ console.log(checkVowelConsonant('a')); // Output: "Vokal"
  * 4. RETURN tipe data BOOLEAN, true jika age >= 18, dan false jika tidak.
  */
 
+/** Answer 8 */
+console.log("Answer 8")
 function canVote(age) {
     // code di scope ini yaa
 }
 
 console.log(canVote(20)); // true
 console.log(canVote(17)); // false
+console.log("")
 
 
 
-
-/**
+/** Question 9
  * Menentukan Hari dalam Seminggu
  * 
  * Buatlah sebuah fungsi JavaScript yang menerima angka dan mengembalikan nama hari dalam seminggu.
@@ -180,18 +203,20 @@ console.log(canVote(17)); // false
  * 4. RETURN "Nomor hari tidak valid" jika dayNumber tidak berada dalam rentang 1 sampai 7.
  */
 
+/** Answer 9 */
+console.log("Answer 9")
 function getDayName(dayNumber) {
-    // code disini
+    
 }
 
 console.log(getDayName(1)); // Output: "Senin"
 console.log(getDayName(5)); // Output: "Jumat"
 console.log(getDayName(8)); // Output: "Nomor hari tidak valid"
+console.log("")
 
 
 
-
-/**
+/** Question 10
  * Membalikkan Array
  * 
  * Buatlah sebuah fungsi JavaScript yang membalikkan urutan elemen dalam sebuah array menggunakan loop.
@@ -203,20 +228,25 @@ console.log(getDayName(8)); // Output: "Nomor hari tidak valid"
  * 4. RETURN array yang telah dibalik.
  */
 
+/** Answer 10 */
+console.log("Answer 10")
 function reverseArray(arr) {
-    // code disini yaa
+    
 }
 
 console.log(reverseArray([1, 2, 3, 4, 5])); // Output: [5, 4, 3, 2, 1]
 console.log(reverseArray(['a', 'b', 'c'])); // Output: ['c', 'b', 'a']
+console.log("")
 
 
 
-/**
+/** Question 11
  * Buat function untuk mengecek apakah input tersebut palindrome, return true jika palindrome, dan jika tidak palindrome maka return false
  * 
  */
 
+/** Answer 11 */
+console.log("Answer 11")
 const isPalindrome = (inputUser) => {
 
 }
@@ -224,3 +254,4 @@ const isPalindrome = (inputUser) => {
 console.log(isPalindrome("kasur rusak")); // true
 console.log(isPalindrome("kodok")); // true
 console.log(isPalindrome("makan malam")); // false
+console.log("")

@@ -43,11 +43,12 @@ console.log ("")
 /** Answer 3 */
 console.log ("Answer 3")
 let students = ["Tito", "arY", "Bostang"]
-let resultThree
+let resultThree =[]
 
-resultThree = students.map((student) => {
-    return student.toUpperCase();
-})
+for (let i = 0; i < students.length; i++) {
+    let name = students[i];
+    resultThree.push(name.toUpperCase())
+}
 console.log ("Array student dalam huruf besar :", resultThree)
 console.log ("")
 
